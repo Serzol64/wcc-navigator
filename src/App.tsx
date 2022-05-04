@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { navigate-outline, cart-outline, storefront-outline } from 'ionicons/icons';
+import { navigate, cart, storefront } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -56,15 +56,15 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={navigate-outline} />
+            <IonIcon icon={navigate} />
             <IonLabel>Навигатор</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={cart-outline} />
+            <IonIcon icon={cart} />
             <IonLabel>Покупки</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={storefront-outline} />
+            <IonIcon icon={storefront} />
             <IonLabel>Магазины</IonLabel>
           </IonTabButton>
         </IonTabBar>
