@@ -1,0 +1,17 @@
+html, body, ion-title, #buysList{
+	font-family: 'PT Sans', sans-serif;
+}
+
+ion-title{
+	font-size: 120%;
+	color: white;
+}
+
+#buysList{
+	padding: 1%;
+	margin-top: 2%;
+}
+#buysList > header {
+    font-size: calc(120% * 2);
+    font-weight: bold;
+}

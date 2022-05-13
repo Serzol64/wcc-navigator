@@ -1,0 +1,17 @@
+html, body, ion-title, #storesGrid{
+	font-family: 'PT Sans', sans-serif;
+}
+
+ion-title{
+	font-size: 120%;
+	color: white;
+}
+
+#storesGrid{
+	padding: 1%;
+	margin-top: 2%;
+}
+#storesGrid > header {
+    font-size: calc(120% * 2);
+    font-weight: bold;
+}

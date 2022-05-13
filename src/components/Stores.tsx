@@ -6,7 +6,8 @@ export class Stores extends React.Component{
 	  return (
 		<React.Fragment>
 			<div id="storesGrid">
-			  
+			  <header>Категории</header>
+			  <main></main>
 			</div>
 		</React.Fragment>
 	  );

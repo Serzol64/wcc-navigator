@@ -10,6 +10,7 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #3171e0;
   --ion-color-primary-tint: #4c8dff;
+  --ion-font-family: 'PTSans';
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -233,4 +234,52 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../public/assets/fonts/PTSans/PTSans-Regular.eot');
+    src: local('PT Sans'), local('PTSans-Regular'),
+        url('../../public/assets/fonts/PTSans/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../public/assets/fonts/PTSans/PTSans-Regular.woff2') format('woff2'),
+        url('../../public/assets/fonts/PTSans/PTSans-Regular.woff') format('woff'),
+        url('../../public/assets/fonts/PTSans/PTSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../public/assets/fonts/PTSans/PTSans-BoldItalic.eot');
+    src: local('PT Sans Bold Italic'), local('PTSans-BoldItalic'),
+        url('../../public/assets/fonts/PTSans/PTSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../public/assets/fonts/PTSans/PTSans-BoldItalic.woff2') format('woff2'),
+        url('../../public/assets/fonts/PTSans/PTSans-BoldItalic.woff') format('woff'),
+        url('../../public/assets/fonts/PTSans/PTSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../public/assets/fonts/PTSans/PTSans-Italic.eot');
+    src: local('PT Sans Italic'), local('PTSans-Italic'),
+        url('../../public/assets/fonts/PTSans/PTSans-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../public/assets/fonts/PTSans/PTSans-Italic.woff2') format('woff2'),
+        url('../../public/assets/fonts/PTSans/PTSans-Italic.woff') format('woff'),
+        url('../../public/assets/fonts/PTSans/PTSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../../public/assets/fonts/PTSans/PTSans-Bold.eot');
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+        url('../../public/assets/fonts/PTSans/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../public/assets/fonts/PTSans/PTSans-Bold.woff2') format('woff2'),
+        url('../../public/assets/fonts/PTSans/PTSans-Bold.woff') format('woff'),
+        url('../../public/assets/fonts/PTSans/PTSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
