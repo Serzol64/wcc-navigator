@@ -6,10 +6,21 @@ export class Buy extends React.Component{
 	constructor({ props }: { props: {} | Readonly<{}>; }){
 		super(props);
 	}
+	componentDidMount(): void{
+		$(() => {
+			
+		});
+	}
 	render(): JSX.Element{
 		return (
 			<React.Fragment>
-				
+				<div className='listGrid' id='buys'>
+					<ul id="cards">
+						<li>
+
+						</li>
+					</ul>
+				</div>
 			</React.Fragment>
 		);
 	}
