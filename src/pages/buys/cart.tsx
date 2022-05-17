@@ -17,8 +17,10 @@ export class CartGrid extends React.Component{
 			<React.Fragment>
 				<div className='listGrid' id='cart'>
 					<ul id="cards">
-						<li>
-							
+						<li style={this.props.cardCart}>
+							<img src={ this.blobToFile(response.Image) } style={this.props.productImage}/>
+							<span style={this.props.cartTitle}>{ response.Title }</span>
+							<strong style={this.props.cartPrice}>{ response.Cost }</strong>
 						</li>
 					</ul>
 				</div>
@@ -27,6 +29,14 @@ export class CartGrid extends React.Component{
 				</footer>
 			</React.Fragment>
 		);
+	}
+	blobToFile({query}: {query: any}) : string{
+		var reader = new FileReader();
+		reader.readAsDataURL(query);
+		reader.onloadend = () => {
+			var base64data = reader.result;
+			return base64data;
+		}
 	}
 }
 

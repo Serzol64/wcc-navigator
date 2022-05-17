@@ -12,17 +12,30 @@ export class Buy extends React.Component{
 		});
 	}
 	render(): JSX.Element{
+		const buysListFeed = smartList.map(({response}: {response : any}) => {
+			(
+				<li style={this.props.cardBuy}>
+					<img src={ this.blobToFile(response.Image) } style={this.props.productImage}/>
+					<span style={this.props.buyTitle}>{ response.Title }</span>
+					<strong style={this.props.buyPrice}>{ response.Cost }</strong>
+				</li>
+			)
+		});
 		return (
 			<React.Fragment>
 				<div className='listGrid' id='buys'>
-					<ul id="cards">
-						<li>
-
-						</li>
-					</ul>
+					<ul id="cards">{ buysListFeed }</ul>
 				</div>
 			</React.Fragment>
 		);
+	}
+	blobToFile({query}: {query: any}) : string{
+		var reader = new FileReader();
+		reader.readAsDataURL(query);
+		reader.onloadend = () => {
+			var base64data = reader.result;
+			return base64data;
+		}
 	}
 }
 
