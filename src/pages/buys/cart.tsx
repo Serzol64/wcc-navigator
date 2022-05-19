@@ -17,10 +17,10 @@ export class CartGrid extends React.Component{
 			<React.Fragment>
 				<div className='listGrid' id='cart'>
 					<ul id="cards">
-						<li style={this.props.cardCart}>
-							<img src={ this.blobToFile(response.Image) } style={this.props.productImage}/>
-							<span style={this.props.cartTitle}>{ response.Title }</span>
-							<strong style={this.props.cartPrice}>{ response.Cost }</strong>
+						<li style={this.props.style.cardCart}>
+							<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
+							<span style={this.props.style.cartTitle}>{ response.Title }</span>
+							<strong style={this.props.style.cartPrice}>{ response.Cost }</strong>
 						</li>
 					</ul>
 				</div>

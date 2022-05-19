@@ -14,10 +14,10 @@ export class Buy extends React.Component{
 	render(): JSX.Element{
 		const buysListFeed = smartList.map(({response}: {response : any}) => {
 			(
-				<li style={this.props.cardBuy}>
-					<img src={ this.blobToFile(response.Image) } style={this.props.productImage}/>
-					<span style={this.props.buyTitle}>{ response.Title }</span>
-					<strong style={this.props.buyPrice}>{ response.Cost }</strong>
+				<li style={this.props.style.cardBuy}>
+					<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
+					<span style={this.props.style.buyTitle}>{ response.Title }</span>
+					<strong style={this.props.style.buyPrice}>{ response.Cost }</strong>
 				</li>
 			)
 		});
@@ -37,6 +37,7 @@ export class Buy extends React.Component{
 			return base64data;
 		}
 	}
+	
 }
 
 const smartList = new BuyListService({ event: "currentList", type: null }).eventStart();

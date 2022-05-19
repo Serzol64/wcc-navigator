@@ -5,24 +5,16 @@ import { BuysFeed } from '../handlers/buys/Feed';
 import './styles/buys.css';
 
 export class Buys extends React.Component{
-  styleGenerator(t : bool){
-	  let call : any | undefined;
-	  
-	  if(t){ call = new BuysFeed('ui-change', 1).eventStart(); }
-	  else{ call = new BuysFeed('ui-change', 0).eventStart(); }
-	  
-	  return call;
-  }
-  render(){
+  render(): JSX.Element{
 	  return (
 		<React.Fragment>
 			<div id="buysList">
 			  <header>В корзине</header>
-			  <main><CartGrid style={this.styleGenerator(false)} /></main>
+			  <main><CartGrid style={new BuysFeed('ui-change', 0).eventStart()} /></main>
 			</div>
 			<div id="buysList">
 			  <header>Надо купить</header>
-			  <main><Buy style={this.styleGenerator(true)} /></main>
+			  <main><Buy style={new BuysFeed('ui-change', 1).eventStart()} /></main>
 			</div>
 		</React.Fragment>
 	  );
