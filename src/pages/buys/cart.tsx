@@ -21,6 +21,7 @@ export class CartGrid extends React.Component{
 							<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
 							<span style={this.props.style.cartTitle}>{ response.Title }</span>
 							<strong style={this.props.style.cartPrice}>{ response.Cost }</strong>
+							<button style={this.props.style.cartAction}>Куплено</button>
 						</li>
 					</ul>
 				</div>
@@ -30,7 +31,7 @@ export class CartGrid extends React.Component{
 			</React.Fragment>
 		);
 	}
-	blobToFile({query}: {query: any}) : string{
+	blobToFile({query}: {query: any}) : void{
 		var reader = new FileReader();
 		reader.readAsDataURL(query);
 		reader.onloadend = () => {

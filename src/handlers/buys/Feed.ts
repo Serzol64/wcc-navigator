@@ -22,26 +22,30 @@ export class BuysFeed{
                type cartUI = {
                     cardCart: any,
                     cartTitle: any,
-                    cartPrice: any
+                    cartPrice: any,
+                    cartAction: any
                };
                return <buysCard><unknown><cartUI>{
                    cardCart: {},
                    productImage: {},
                    cartTitle: {},
-                   cartPrice: {}
+                   cartPrice: {},
+                   cartAction: {}
                };
             }
             if(event.eventType == 1){
                 type buysUI = {
                     cardBuy: any,
                     buyTitle: any,
-                    buyPrice: any
+                    buyPrice: any,
+                    buyAction: any
                };
                 return  <buysCard><unknown><buysUI>{
                     cardBuy: {},
                     productImage: {},
                     buyTitle: {},
-                    buyPrice: {}
+                    buyPrice: {},
+                    buyAction: {}
                 }
             }
 

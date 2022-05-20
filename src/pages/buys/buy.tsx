@@ -18,6 +18,7 @@ export class Buy extends React.Component{
 					<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
 					<span style={this.props.style.buyTitle}>{ response.Title }</span>
 					<strong style={this.props.style.buyPrice}>{ response.Cost }</strong>
+					<button style={this.props.style.buyAction}>В корзину</button>
 				</li>
 			)
 		});
@@ -29,7 +30,7 @@ export class Buy extends React.Component{
 			</React.Fragment>
 		);
 	}
-	blobToFile({query}: {query: any}) : string{
+	blobToFile({query}: {query: any}) : void{
 		var reader = new FileReader();
 		reader.readAsDataURL(query);
 		reader.onloadend = () => {
