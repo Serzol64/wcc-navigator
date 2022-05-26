@@ -1,0 +1,34 @@
+html, body, ion-title, #settingsList{
+	font-family: 'PT Sans', sans-serif;
+}
+
+ion-title{
+	font-size: 100%;
+}
+
+#settingsList{}
+
+#settingsList > ul{}
+#settingsList > ul li.setting-button{}
+
+.setting-button.wcc-id{
+
+}
+.setting-button.wcc-id img{
+    
+}
+.setting-button.wcc-id div{
+    
+}
+.setting-button.wcc-id div strong{
+    
+}
+.setting-button.wcc-id div span{
+    
+}
+
+.setting-button.parameter-menu{}
+.setting-button.parameter-menu ul{}
+.setting-button.parameter-menu ul li{}
+.setting-button.parameter-menu ul li img{}
+.setting-button.parameter-menu ul li span{}

@@ -15,22 +15,24 @@ export class Settings extends React.Component{
 					</div>
 				  </li>
 				  <li className="setting-button parameter-menu">
-						<li>
-							<img src="" />
-							<span>Навигатор</span>
-						</li>
-						<li>
-							<img src="" />
-							<span>Поиск и списки</span>
-						</li>
-						<li>
-							<img src="" />
-							<span>Уведомления</span>
-						</li>
-						<li>
-							<img src="" />
-							<span>Безопасность</span>
-						</li>
+						<ul>
+							<li>
+								<img src="" />
+								<span>Навигатор</span>
+							</li>
+							<li>
+								<img src="" />
+								<span>Поиск и списки</span>
+							</li>
+							<li>
+								<img src="" />
+								<span>Уведомления</span>
+							</li>
+							<li>
+								<img src="" />
+								<span>Безопасность</span>
+							</li>
+						</ul>
 				  </li>
 				  <li className="setting-button parameter-menu">
 					<ul>

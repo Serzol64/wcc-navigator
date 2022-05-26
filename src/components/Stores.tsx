@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/stores.css';
+import './styles/addons/recommends.css';
 
 export class Stores extends React.Component{
   render(){ 

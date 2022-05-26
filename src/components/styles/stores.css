@@ -15,3 +15,7 @@ ion-title{
     font-size: calc(120% * 2);
     font-weight: bold;
 }
+#storesGrid > main{}
+#storesGrid > main a{}
+#storesGrid > footer{}
+#storesGrid > footer #header{}

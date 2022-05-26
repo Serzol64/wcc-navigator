@@ -1,0 +1,4 @@
+#recommends{}
+#recommends > *[data-status='error']{}
+#recommends > *[data-status='error'] h3{}
+#recommends > *[data-status='error'] span{}
