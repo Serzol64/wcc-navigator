@@ -1,4 +1,4 @@
-import { IServiceControl } from "../../handlers/ControlInterface";
+import { IServiceControl } from "../../../handlers/ControlInterface";
 
 export class StoreFeedService{
     feedStoresCurrent: { svc: any; query: any; };
@@ -115,9 +115,7 @@ export class StoreFeedService{
 
 
 				return productsDB;
-			break;
-			default: return null; break;
-		}
+			default: return null;		}
     }
     public eventStart(){
         return this.serviceFeed(this.feedStoresCurrent);

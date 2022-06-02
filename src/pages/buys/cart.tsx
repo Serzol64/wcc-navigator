@@ -1,12 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import $ from 'jquery';
 import { BuysCartFeedService } from '../../services/buys/Cart';
 
-export class CartGrid extends React.Component{
-	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
-	constructor({ props }: { props: {} | Readonly<{}>; }){
-		super(props);
-	}
+export class CartGrid extends React.Component<{ style?: any }>{
 	componentDidMount(): void{
 		$(() => {
 			
@@ -18,9 +16,9 @@ export class CartGrid extends React.Component{
 				<div className='listGrid' id='cart'>
 					<ul id="cards">
 						<li style={this.props.style.cardCart}>
-							<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
-							<span style={this.props.style.cartTitle}>{ response.Title }</span>
-							<strong style={this.props.style.cartPrice}>{ response.Cost }</strong>
+							<img src={ this.blobToFile(smartList.Image) } style={this.props.style.productImage}/>
+							<span style={this.props.style.cartTitle}>{ smartList.Title }</span>
+							<strong style={this.props.style.cartPrice}>{ smartList.Cost }</strong>
 							<button style={this.props.style.cartAction}>Куплено</button>
 						</li>
 					</ul>
@@ -31,7 +29,7 @@ export class CartGrid extends React.Component{
 			</React.Fragment>
 		);
 	}
-	blobToFile({query}: {query: any}) : void{
+	blobToFile(query: any) : any{
 		var reader = new FileReader();
 		reader.readAsDataURL(query);
 		reader.onloadend = () => {

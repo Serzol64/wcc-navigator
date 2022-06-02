@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
+/* eslint-disable eqeqeq */
 import { IHandlerControl } from "../ControlInterface";
 
 export class BuysFeed{

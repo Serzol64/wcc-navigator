@@ -1,4 +1,4 @@
-import { IServiceControl } from "../../handlers/ControlInterface";
+import { IServiceControl } from "../../../handlers/ControlInterface";
 
 export class StoreListService{
     storeService: { svc: any; query: any; };
@@ -59,7 +59,6 @@ export class StoreListService{
 				];
 
 				return list;
-			break;
 			case "currentCategory":
 					let products = [
 						 {
@@ -162,9 +161,7 @@ export class StoreListService{
 
 
 				return products;
-			break;
-			default: return null; break;
-		}
+			default: return null;		}
     }
     public eventStart(){
         return this.serviceList(this.storeService);

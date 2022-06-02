@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { IHandlerControl } from "../../ControlInterface";
 
 export class StoresFeed{

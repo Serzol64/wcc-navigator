@@ -1,11 +1,9 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
 import { BuyListService } from '../../services/buys/Buy';
 
-export class Buy extends React.Component{
-	// eslint-disable-next-line @typescript-eslint/no-useless-constructor
-	constructor({ props }: { props: {} | Readonly<{}>; }){
-		super(props);
-	}
+export class Buy extends React.Component<{ style?: any }>{
 	componentDidMount(): void{
 		$(() => {
 			
@@ -30,7 +28,7 @@ export class Buy extends React.Component{
 			</React.Fragment>
 		);
 	}
-	blobToFile({query}: {query: any}) : void{
+	blobToFile(query: any) : any{
 		var reader = new FileReader();
 		reader.readAsDataURL(query);
 		reader.onloadend = () => {

@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { IHandlerControl } from "../../ControlInterface";
 
 export class ProductPage{
@@ -12,6 +13,7 @@ export class ProductPage{
     protected handlerFeed(event : IHandlerControl){
         if(event.screenEvent === 'ui-change'){
 
+            // eslint-disable-next-line eqeqeq
             if(event.eventType == 0){
                 //Нулевое значение - это то, чего касается первоначальных элементов и компонентов
 
