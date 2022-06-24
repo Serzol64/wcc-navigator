@@ -9,26 +9,60 @@ ion-title{
 #settingsList{}
 
 #settingsList > ul{}
-#settingsList > ul li.setting-button{}
+#settingsList > ul li.setting-button{
+	
+}
 
 .setting-button.wcc-id{
-
+	width: 98%;
+	background-color: #EA005E;
+	padding: 1%;
+	height: 99px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 108%;
+	color: white;
 }
 .setting-button.wcc-id img{
-    
+    width: 60px;
+	height: 60px;
+	object-fit: cover;
+	float: left;
+	margin-left: 4%;
 }
 .setting-button.wcc-id div{
-    
+    display: inline-grid;
+	margin-left: 4%;
 }
 .setting-button.wcc-id div strong{
-    
-}
-.setting-button.wcc-id div span{
-    
+    font-size: calc(70% * 2);
 }
 
-.setting-button.parameter-menu{}
-.setting-button.parameter-menu ul{}
-.setting-button.parameter-menu ul li{}
-.setting-button.parameter-menu ul li img{}
-.setting-button.parameter-menu ul li span{}
+.setting-button.parameter-menu{
+	list-style-type: none;
+	margin-top: 4%;
+	padding: 1%;
+	border-radius: 10px;
+	border: solid 2px gray;
+	width: 98%;
+	font-size: 140%;
+	font-family: 'PT Sans', sans-serif;
+}
+.setting-button.parameter-menu ul{
+	list-style-type: none;
+	padding: 2%;
+}
+.setting-button.parameter-menu ul li{
+	padding: 1%;
+	border-top: solid 1px gray;
+	cursor: pointer;
+}
+.setting-button.parameter-menu ul li:nth-last-child(1){ border-bottom: solid 1px gray; }
+.setting-button.parameter-menu ul li img{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	object-fit: cover;
+}
+.setting-button.parameter-menu ul li span{
+	margin-left: 2%;
+}

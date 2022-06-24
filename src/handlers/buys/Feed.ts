@@ -28,11 +28,42 @@ export class BuysFeed{
                     cartAction: any
                };
                return <buysCard><unknown><cartUI>{
-                   cardCart: {},
-                   productImage: {},
-                   cartTitle: {},
-                   cartPrice: {},
-                   cartAction: {}
+                   cardCart: {
+                        width: '',
+                        height: '',
+                        padding: 0,
+                        marginLeft: 0,
+                        backgroundColor: ''
+                   },
+                   productImage: {
+                        marginTop: 0 * 1.5,
+                        marginLeft: 1 * 2,
+                        width: '',
+                        height: '',
+                        objectFit: 'contain',
+                        float: 'left'
+                   },
+                   cartTitle: {
+                        color: '',
+                        fontSize: 0,
+                        marginTop: 1 * 2,
+                        marginLeft: 1 * 2,
+                        float: 'left'
+                   },
+                   cartPrice: {
+                        color: '',
+                        fontSize: 0,
+                        marginTop: 1 * 2,
+                        marginRight: 1 * 2,
+                        float: 'right'
+                   },
+                   cartAction: {
+                        padding: 0,
+                        fontSize: 0,
+                        color: 'white',
+                        backgroundColor: '',
+                        width: 0
+                   }
                };
             }
             if(event.eventType == 1){
@@ -43,11 +74,42 @@ export class BuysFeed{
                     buyAction: any
                };
                 return  <buysCard><unknown><buysUI>{
-                    cardBuy: {},
-                    productImage: {},
-                    buyTitle: {},
-                    buyPrice: {},
-                    buyAction: {}
+                    cardBuy: {
+                        width: '',
+                        height: '',
+                        padding: 0,
+                        marginLeft: 0,
+                        backgroundColor: ''
+                    },
+                    productImage: {
+                        marginTop: 0 * 1.5,
+                        marginLeft: 1 * 2,
+                        width: '',
+                        height: '',
+                        objectFit: 'contain',
+                        float: 'left'
+                    },
+                    buyTitle: {
+                        color: '',
+                        fontSize: 0,
+                        marginTop: 1 * 2,
+                        marginLeft: 1 * 2,
+                        float: 'left'
+                    },
+                    buyPrice: {
+                        color: '',
+                        fontSize: 0,
+                        marginTop: 1 * 2,
+                        marginLeft: 1 * 2,
+                        float: 'left'
+                    },
+                    buyAction: {
+                        padding: 0,
+                        fontSize: 0,
+                        color: 'white',
+                        backgroundColor: '',
+                        width: 0
+                    }
                 }
             }
 

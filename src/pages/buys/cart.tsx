@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
@@ -11,17 +12,21 @@ export class CartGrid extends React.Component<{ style?: any }>{
 		});
 	}
 	render(): JSX.Element{
+		const cartListFeed = new BuysCartFeedService({ event: "currentCart", type: null }).eventStart().map(({response}: {response : any}) => {
+			(
+				<li style={this.props.style.cardCart}>
+					<img src={ response.Image } style={this.props.style.productImage}/>
+					<span style={this.props.style.cartTitle}>{ response.Title }</span>
+					<strong style={this.props.style.cartPrice}>{ response.Cost }</strong>
+					<button style={this.props.style.cartAction}>Куплено</button>
+				</li>
+			)
+		});
+
 		return (
 			<React.Fragment>
 				<div className='listGrid' id='cart'>
-					<ul id="cards">
-						<li style={this.props.style.cardCart}>
-							<img src={ this.blobToFile(smartList.Image) } style={this.props.style.productImage}/>
-							<span style={this.props.style.cartTitle}>{ smartList.Title }</span>
-							<strong style={this.props.style.cartPrice}>{ smartList.Cost }</strong>
-							<button style={this.props.style.cartAction}>Куплено</button>
-						</li>
-					</ul>
+					<ul id="cards">{ cartListFeed }</ul>
 				</div>
 				<footer className='summary'>
 					Стоимость товаров в корзине:<strong></strong>
@@ -29,14 +34,5 @@ export class CartGrid extends React.Component<{ style?: any }>{
 			</React.Fragment>
 		);
 	}
-	blobToFile(query: any) : any{
-		var reader = new FileReader();
-		reader.readAsDataURL(query);
-		reader.onloadend = () => {
-			var base64data = reader.result;
-			return base64data;
-		}
-	}
 }
 
-const smartList = new BuysCartFeedService({ event: "currentCart", type: null }).eventStart();

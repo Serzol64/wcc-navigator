@@ -1,5 +1,4 @@
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
+import { SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite';
 import { IServiceControl } from "../../handlers/ControlInterface";
 
 export class BuyListService{
@@ -9,28 +8,29 @@ export class BuyListService{
         this.buyService = {
             svc: event,
             query: type,
-            _dataConnector: this.DBInit()
+            _dataConnector: SQLite.create({
+                name: 'buy.sql',
+                location: '../../data/'
+            })
         }
     }
     svc: string | undefined;
     query: string | undefined;
+    _dataConnector: any | undefined;
 
-    protected serviceList(event : IServiceControl){
+    protected serviceList({ event }: { event: IServiceControl; }): any{
 		switch(event.svc){
 			case "currentList":
-				let products = event._dataConnector.get('SELECT * FROM buys');
-
-				return products;
-			default: return null;		}
-    }
-    private async DBInit(){
-        return await open({
-            filename: '../data/buy.sql',
-            driver: sqlite3.Database
-        });
+				event._dataConnector.then(async (db: SQLiteObject) => {
+                    await db.transaction((tx) => {
+                        tx.executeSql('SELECT * FROM buys', [], (rs: { rows: {}; }) => { return rs.rows; });
+                    });
+                });
+                break;
+			default: return null;	}
     }
     public eventStart(){
-        return this.serviceList(this.buyService);
+        return this.serviceList({ event: this.buyService });
     }
 
 }

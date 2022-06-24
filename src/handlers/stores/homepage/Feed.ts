@@ -14,12 +14,16 @@ export class StoresFeed{
         if(event.screenEvent === 'ui-change'){
 
             if(event.eventType == 0){
-                //Нулевое значение - это то, чего касается первоначальных элементов и компонентов
+               return {
+                   
+               };
 
                
             }
             if(event.eventType == 1){
-               
+               return {
+
+               };
             }
 
         }

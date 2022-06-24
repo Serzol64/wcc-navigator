@@ -10,10 +10,10 @@ export class Buy extends React.Component<{ style?: any }>{
 		});
 	}
 	render(): JSX.Element{
-		const buysListFeed = smartList.map(({response}: {response : any}) => {
+		const buysListFeed = new BuyListService({ event: "currentList", type: null }).eventStart().map(({response}: {response : any}) => {
 			(
 				<li style={this.props.style.cardBuy}>
-					<img src={ this.blobToFile(response.Image) } style={this.props.style.productImage}/>
+					<img src={ response.Image } style={this.props.style.productImage}/>
 					<span style={this.props.style.buyTitle}>{ response.Title }</span>
 					<strong style={this.props.style.buyPrice}>{ response.Cost }</strong>
 					<button style={this.props.style.buyAction}>В корзину</button>
@@ -28,15 +28,5 @@ export class Buy extends React.Component<{ style?: any }>{
 			</React.Fragment>
 		);
 	}
-	blobToFile(query: any) : any{
-		var reader = new FileReader();
-		reader.readAsDataURL(query);
-		reader.onloadend = () => {
-			var base64data = reader.result;
-			return base64data;
-		}
-	}
 	
 }
-
-const smartList = new BuyListService({ event: "currentList", type: null }).eventStart();
