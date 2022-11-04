@@ -7,21 +7,16 @@ export class BuyListService{
     constructor({ event, type }: { event: any; type: any; }){
         this.buyService = {
             svc: event,
-            query: type,
-            _dataConnector: SQLite.create({
-                name: 'buy.sql',
-                location: '../../data/'
-            })
+            query: type
         }
     }
     svc: string | undefined;
     query: string | undefined;
-    _dataConnector: any | undefined;
 
     protected serviceList({ event }: { event: IServiceControl; }): any{
 		switch(event.svc){
 			case "currentList":
-				event._dataConnector.then(async (db: SQLiteObject) => {
+				SQLite.create({ name: 'buy.sql', location: '../../data/' }).then(async (db: SQLiteObject) => {
                     await db.transaction((tx) => {
                         tx.executeSql('SELECT * FROM buys', [], (rs: { rows: {}; }) => { return rs.rows; });
                     });

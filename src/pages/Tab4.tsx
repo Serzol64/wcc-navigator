@@ -2,6 +2,7 @@ import React from "react";
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { Settings } from '../components/Settings';
 import './Tab4.css';
+import { Route } from "react-router";
 
 const Tab4: React.FC = () => {
   return (

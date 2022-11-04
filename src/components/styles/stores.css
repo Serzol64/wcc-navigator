@@ -14,8 +14,33 @@ ion-title{
 #storesGrid > header {
     font-size: calc(120% * 2);
     font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #00bfff;
 }
-#storesGrid > main{}
-#storesGrid > main a{}
-#storesGrid > footer{}
-#storesGrid > footer #header{}
+#storesGrid > main{
+	display: block;
+	margin-top: 2%;
+    margin-bottom: 2%;
+}
+#storesGrid > main a{
+	display: block;
+	font-size: 160%;
+	padding: 2%;
+	width: 90vw;
+	color: white;
+	background-color: red;
+	margin-top: 1cm;
+    margin-bottom: 1cm;
+}
+#storesGrid > footer{
+	padding: 1%;
+	margin-top: 2%;
+}
+#storesGrid > footer #header{
+	font-size: calc(120% * 2);
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #00bfff;
+}

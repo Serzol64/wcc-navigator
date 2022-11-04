@@ -3,7 +3,11 @@ html, body, ion-title, #settingsList{
 }
 
 ion-title{
-	font-size: 100%;
+	font-size: x-large;
+}
+
+ion-back-button{
+	color: white;
 }
 
 #settingsList{}
@@ -19,7 +23,7 @@ ion-title{
 	padding: 1%;
 	height: 99px;
 	font-family: 'PT Sans', sans-serif;
-	font-size: 108%;
+	font-size: large;
 	color: white;
 }
 .setting-button.wcc-id img{
@@ -34,7 +38,7 @@ ion-title{
 	margin-left: 4%;
 }
 .setting-button.wcc-id div strong{
-    font-size: calc(70% * 2);
+    font-size: xx-large;
 }
 
 .setting-button.parameter-menu{
@@ -44,7 +48,7 @@ ion-title{
 	border-radius: 10px;
 	border: solid 2px gray;
 	width: 98%;
-	font-size: 140%;
+	font-size: x-large;
 	font-family: 'PT Sans', sans-serif;
 }
 .setting-button.parameter-menu ul{
@@ -56,6 +60,10 @@ ion-title{
 	border-top: solid 1px gray;
 	cursor: pointer;
 }
+.setting-button.parameter-menu ul li a{
+	color: black;
+	text-decoration: none;
+}
 .setting-button.parameter-menu ul li:nth-last-child(1){ border-bottom: solid 1px gray; }
 .setting-button.parameter-menu ul li img{
 	width: 40px;
@@ -66,3 +74,4 @@ ion-title{
 .setting-button.parameter-menu ul li span{
 	margin-left: 2%;
 }
+

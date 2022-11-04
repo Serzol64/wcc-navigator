@@ -27,12 +27,13 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=3
-FILE_NAME_0=762;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2FBuys.tsx;0;4
-FILE_NAME_1=245;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2Fstyles%2Fstores.css;0;4
-FILE_NAME_2=221;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2Fstyles%2Fbuys.css;0;4
-FILE_NAME_3=718;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fservices%2Fbuys%2FCart.ts;0;4
-FILE_NAME_4=666;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fservices%2Fbuys%2FBuy.ts;0;4
+current_page=1
+FILE_NAME_0=4487;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2FApp.tsx;0;4
+FILE_NAME_1=0;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2FSettings.tsx;0;4
+FILE_NAME_2=216;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2FsettingsPage%2FParameters.tsx;0;4
+FILE_NAME_3=1009;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2Fstyles%2Fsettings.css;0;4
+FILE_NAME_4=73;CSS;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fcomponents%2Fstyles%2Fnavigator.css;0;4
+FILE_NAME_5=0;TypeScript;0;EUTF-8;1;1;0;%2Fhome%2Fsergey%2FРабочий%20стол%2FSergey%2FWCCNavigator%2Fsrc%2Fpages%2FTab4.tsx;0;4
 
 [VTE]
 last_dir=/home/sergey/Рабочий стол/Sergey/WCCNavigator

@@ -3,7 +3,6 @@ export interface IHandlerControl{
     eventType: number
 }
 export type IServiceControl = {
-    _dataConnector?: any;
     svc?: any;
     query?: any;
 };
