@@ -12,7 +12,69 @@ ion-title{
 	margin-top: 2%;
 }
 #buysList > header {
-    font-size: calc(120% * 2);
+    font-size: xx-large;
     font-weight: bold;
+    padding: 0.5%;
+	margin-top: 1%;
 }
-#buysList > main{}
+#buysList:nth-child(3) > header{ color: green; }
+#buysList:nth-child(2) > header{ color: #e81123; }
+
+#buysList > main{
+	padding: 0.5em;
+	margin-top: 1em;
+}
+#buysList > main div.listGrid{
+	margin-top: 0.5em;
+}
+#buysList > main div.listGrid ul#cards{
+	width: 100vw;
+    height: auto;
+    list-style-type: none;
+}
+#buysList > main div.listGrid ul#cards li{
+	width: 25vw;
+	height: auto;
+	display: inline-grid; 
+	grid-auto-flow: row dense; 
+	grid-auto-columns: 50%; 
+	grid-auto-rows: 0.5em; 
+	grid-template-columns: 100%; 
+	grid-template-rows: 4fr 3fr 2fr 1fr; 
+	gap: 1em 2em;  
+	align-content: stretch; 
+    justify-items: stretch; 
+    box-shadow: 10px -7px 8px -2px rgba(34, 60, 80, 0.6);
+}
+#buysList > main div.listGrid ul#cards li:not(:nth-child(1)){
+	margin-left: 8vw;
+}
+
+#buysList > main div.listGrid ul#cards li img{
+	height: 200px;
+	object-fit: contain;
+}
+#buysList > main div.listGrid ul#cards li span{
+	font-size: xx-large;
+    margin-left: 3%;
+    margin-top: 9%;
+}
+#buysList > main div.listGrid ul#cards li strong{
+	font-size: xx-large;
+	text-align: right;
+	margin-right: 3%;
+}
+#buysList > main div.listGrid ul#cards li button{
+    font-size: x-large;
+	text-align: right;
+	background-color: transparent;
+	text-transform: uppercase;
+	margin-right: 3%;
+}
+#buysList > main div.listGrid#cart ul#cards li button{ color: #e81123; }
+#buysList > main div.listGrid#buys ul#cards li button{ color: green; }
+#buysList > main footer.summary{
+	font-size: x-large;
+	margin-top: 4%;
+	margin-left: 2%;
+}

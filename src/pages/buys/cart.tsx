@@ -2,37 +2,36 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable jsx-a11y/alt-text */
 import * as React from 'react';
-import $ from 'jquery';
 import { BuysCartFeedService } from '../../services/buys/Cart';
 
-export class CartGrid extends React.Component<{ style?: any }>{
-	componentDidMount(): void{
-		$(() => {
-			
-		});
-	}
+export class CartGrid extends React.Component{
 	render(): JSX.Element{
-		const cartListFeed = new BuysCartFeedService({ event: "currentCart", type: null }).eventStart().map(({response}: {response : any}) => {
-			(
-				<li style={this.props.style.cardCart}>
-					<img src={ response.Image } style={this.props.style.productImage}/>
-					<span style={this.props.style.cartTitle}>{ response.Title }</span>
-					<strong style={this.props.style.cartPrice}>{ response.Cost }</strong>
-					<button style={this.props.style.cartAction}>Куплено</button>
-				</li>
-			)
-		});
-
+		//const cartListFeed = new BuysCartFeedService({ event: "currentCart", type: null }).eventStart().then(this.renderList);
+		
 		return (
-			<React.Fragment>
-				<div className='listGrid' id='cart'>
-					<ul id="cards">{ cartListFeed }</ul>
-				</div>
-				<footer className='summary'>
-					Стоимость товаров в корзине:<strong></strong>
-				</footer>
-			</React.Fragment>
+				<React.Fragment>
+					<div className='listGrid' id='cart'>
+						<ul id="cards">
+							<li>
+								<img src="https://images.av.ru/av.ru/product/h2f/h6d/8843817877534.jpg" />
+								<span>Буханка Деревенского</span>
+								<strong>{ 423 + ' ₽' }</strong>
+								<button>Куплено</button>
+							</li>
+							<li>
+								<img src="https://images.av.ru/av.ru/product/h2f/h6d/8843817877534.jpg" />
+								<span>Буханка Деревенского</span>
+								<strong>{ 423 + ' ₽' }</strong>
+								<button>Куплено</button>
+							</li>
+						</ul>
+					</div>
+					<footer className='summary'>
+						Стоимость товаров в корзине:<strong> 423 ₽</strong>
+					</footer>
+				</React.Fragment>
 		);
+		
 	}
 }
 

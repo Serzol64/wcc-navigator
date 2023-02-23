@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite';
-import { IServiceControl } from "../../handlers/ControlInterface";
+import { Storage } from '@ionic/storage';
+import { IServiceControl, IBuyList } from "../../handlers/ControlInterface";
+
 export class BuysCartFeedService{
     buysCardFEED: IServiceControl;
 
@@ -13,18 +14,15 @@ export class BuysCartFeedService{
     svc: string | undefined;
     query: any | undefined;
 
-    protected serviceFeed({ event }: { event: IServiceControl; }): any{
+    protected async serviceFeed({ event }: { event: IServiceControl; }): Promise<any>{
 		switch(event.svc){
 			case "currentCart":
-				SQLite.create({ name: '../../data/buy.sql', location: 'default' }).then(async (db: SQLiteObject) => {
-                    await db.transaction((tx) => {
-                        tx.executeSql('SELECT * FROM cart', [], (rs: { rows: {}; }) => { 
-                            console.log(rs.rows);
-                            return rs.rows; 
-                        });
-                    });
-                });
-                break;
+				const storage = new Storage();
+				let listResponse: IBuyList[] = await storage.get('cart');
+				
+				console.log(listResponse);
+				return listResponse;
+            break;
 			default: 
                 return null;
 		}

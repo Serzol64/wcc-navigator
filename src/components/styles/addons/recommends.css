@@ -10,11 +10,11 @@
 #recommends > *[data-status='error'] h3{
 	margin-top: 1%;
     margin-bottom: 1%;
-    font-size: 150%;
+    font-size: xx-large;
     font-weight: bold;
 }
 #recommends > *[data-status='error'] span{
 	margin-top: 1%;
     margin-bottom: 1%;
-    font-size: 110%;
+    font-size: x-large;
 }

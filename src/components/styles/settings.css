@@ -1,4 +1,4 @@
-html, body, ion-title, #settingsList{
+html, body, ion-title, #settingsList, .item .sc-ion-label-md-h, .item .sc-ion-label-md-h{
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -74,4 +74,105 @@ ion-back-button{
 .setting-button.parameter-menu ul li span{
 	margin-left: 2%;
 }
+
+.aboutPage{
+  width: 50vw;
+  padding: 2%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+.aboutPage > #about{
+  margin-top: 4%;
+}
+.aboutPage > #about *{
+  margin-top: 2%;
+}
+
+header#about > img{
+  width: 15vw;
+  height: 15vw;
+  object-fit: cover;
+}
+
+main#about > h2{
+  font-size: xx-large;
+  color: red;
+  font-weight: bold;
+}
+main#about > h4{
+  font-size: large;
+}
+
+main#about > address{
+  font-size: 100%;
+  color: gray;
+}
+
+.appsPage{
+  padding: 2%;
+  width: 99vw;
+  font-family: 'PT Sans', sans-serif;
+}
+.appsPage > .description{
+  margin-top: 4%;
+}
+.appsPage > ul{
+  margin-top: 4%;
+  list-style-type: none;
+}
+
+
+.appsPage > .description *{
+  display: block;
+  margin-top: 2%;
+}
+.appsPage > .description h2{
+  font-size: xx-large;
+  color: #0079bf;
+  font-weight: bold;
+}
+.appsPage > .description span{
+  font-size: large;
+}
+
+.appsPage > ul li{
+  margin-top: 1%;
+}
+.appsPage > ul li:not(:nth-child(1)){
+  padding-top: 10%;
+}
+.appsPage > ul li img{
+  width: calc(15vw / 2);
+  height: calc(15vw / 2);
+  vertical-align: middle;
+  object-fit: cover;
+  border: solid 2px gray;
+  border-radius: 10px;
+}
+.appsPage > ul li div{
+  width: calc(100vw / 15vw);
+  height: calc(100vw / 15vw);
+  margin-left: 10vw;
+  margin-top: -8%;
+}
+
+.appsPage > ul li div h4{
+  font-size: x-large;
+}
+.appsPage > ul li div p{
+  font-size: medium;
+}
+.appsPage > ul li span{
+  font-size: x-large;
+  display: block;
+  float: right;
+  margin-top: 4%;
+  margin-right: 2%;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #0079bf;
+}
+
+
 

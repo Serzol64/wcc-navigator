@@ -12,7 +12,7 @@ ion-title{
 	margin-top: 2%;
 }
 #storesGrid > header {
-    font-size: calc(120% * 2);
+    font-size: xx-large;
     font-weight: bold;
     margin-top: 1%;
     margin-bottom: 1%;
@@ -25,7 +25,7 @@ ion-title{
 }
 #storesGrid > main a{
 	display: block;
-	font-size: 160%;
+	font-size: x-large;
 	padding: 2%;
 	width: 90vw;
 	color: white;
@@ -38,7 +38,7 @@ ion-title{
 	margin-top: 2%;
 }
 #storesGrid > footer #header{
-	font-size: calc(120% * 2);
+	font-size: xx-large;
     font-weight: bold;
     margin-top: 1%;
     margin-bottom: 1%;
